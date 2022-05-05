@@ -12,4 +12,13 @@ public class GenericStack<T> {
     public T pop() {
         return collection.delete(0);
     }
+
+    @Override
+    public String toString() {
+        String output = "\n";
+        for (int i = 0; i < collection.getNumValores(); i++) {
+            output += (i + 1) + ". " + collection.getElement(i) + "\n";
+        }
+        return output;
+    }
 }

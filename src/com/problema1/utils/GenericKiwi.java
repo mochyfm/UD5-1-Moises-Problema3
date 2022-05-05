@@ -13,8 +13,13 @@ public class GenericKiwi<T> {
         return (T) collection.delete(0);
     }
 
-    public int getNumTotalValores() {
-        return collection.getNumValores();
+    @Override
+    public String toString() {
+        String output = "";
+        for (int i = 0; i < collection.getNumValores(); i++) {
+            output += (i + 1) + " " + collection.getElement(i) + "\n";
+        }
+        return output;
     }
 
 }
